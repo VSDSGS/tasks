@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const { join } = require("path");
 
-app.use(bodyParser.json());
+app.use(express.json({ type: "application/json" }));
 
 const rainAmount = (towers) => {
     let sum = 0;
